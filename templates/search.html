@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Search</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container">
+    <h1 class="mt-5">Search</h1>
+    <form method="post" class="mt-3">
+        <div class="form-group">
+            <input type="text" class="form-control" name="query" placeholder="Search here">
+        </div>
+        <button type="submit" class="btn btn-primary">Search</button>
+    </form>
+    {% if results %}
+    <h2 class="mt-5">Results</h2>
+    <ul class="list-group mt-3">
+        {% for result in results %}
+        <li class="list-group-item">
+            <h5>{{ result.title }}</h5>
+            <a href="{{ result.url }}" target="_blank">{{ result.url }}</a>
+        </li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+</div>
+</body>
+</html>
