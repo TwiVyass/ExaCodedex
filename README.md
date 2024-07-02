@@ -6,8 +6,11 @@ Search Functionality: Users can input a search query, and the application will d
 Bootstrap for Styling: The application uses Bootstrap for a responsive and modern design.
 
 # Prerequisites
+
 Python 3.x
+
 Flask
+
 exa-py
 
  
